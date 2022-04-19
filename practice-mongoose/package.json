@@ -1,0 +1,14 @@
+{
+  "name": "practice-mongoose",
+  "version": "1.0.0",
+  "description": "Practice doing CRUD operations using mongoose ODM for MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andres Breucop",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.3.0"
+  }
+}
