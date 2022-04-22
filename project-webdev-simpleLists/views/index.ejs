@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    <%= listTitle %>
+    - simpleLists</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container-fluid text-center bg-success px-0">
+    <div class="headerText">
+      <span>Welcome to my simpleLists app!</span>
+    </div>
+    <div class="text-white">
+      <h1 class="text-uppercase"><%= listTitle %>
+        <span class="listText">list</span>
+      </h1>
+      <h3><%= theDate %></h3>
+    </div>
+    <div class="bg-light">
+      <ul class="container list-group text-left p-3">
+        <form action="/delete" method="post">
+          <% newListItems.forEach(function(listItem){ %>
+          <li class="list-group-item px-5">
+            <input name="checkbox" type="checkbox" value="<%= listItem._id %>"
+            onChange="this.form.submit()">
+            <span class="px-1"><%= listItem.name %></span>
+            <br>
+            <span class="dateCreated">Date created:
+              <%= listItem.date %></span>
+          </li>
+          <% }); %>
+          <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+        </form>
+      </ul>
+      <form class="form-inline justify-content-center p-5" action="/"
+      method="post">
+        <div>
+          <h3 class="font-weight-bold">Add new item?</h3>
+          <input class="form-control" type="text" name="newItem" value="">
+          <button class="btn btn-primary m-1" type="submit"
+          value="<%= listTitle %>" name="button">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="text-center py-3">
+    Copyright 1breu 2022
+  </div>
+</body>
+
+</html>

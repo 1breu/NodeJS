@@ -1,0 +1,25 @@
+h1 {
+  font-family: "Arial Black";
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.dateCreated {
+  font-size: 12px;
+  color: grey;
+}
+
+.headerText {
+  background-color: gold;
+  font-size: 10px;
+  padding: 2px;
+}
+
+.listText {
+  font-family: "Arial";
+  font-size: 12px;
+  line-height: .5rem;
+  text-transform: none;
+}
